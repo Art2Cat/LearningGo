@@ -1,0 +1,29 @@
+这是用来学习Git的记录
+git init命令用来初始化一个Git仓库，
+添加文件到Git仓库，分两步：
+×第一步，使用命令git add <file> ,这个命令可以多次反复使用，添加多个文件；
+×第二步，使用命令git commit,提交进去Git仓库。
+
+git status命令用来查看工作区的状态，
+git diff <file>命令可以查看被修改文件的具体修改内容，
+
+git log命令可以查看提交历史，在这里找到提交版本，
+git reset --hard commit_id 可以在不同版本间切换回调，如果commit_id是HEAD其指向的版本就是当前版本，
+git reflag可以查看命令历史，可以获得具体版本commit_id
+
+Working Directory 是指当前计算机中存储代码的可见目录，即工作区
+Repository 工作区中有一个隐藏目录“.git”,这是Git的版本库，
+stage(或index)是暂存区
+Git 提交文件进入Git仓库的两步奏就是:Working Directory<file>_---add---> Repository<stage> ---commit---> Repository<HEAD master>
+
+git checkout -- <file> 可以丢弃工作区的修改
+git reset HEAD <file> 恢复某个文件到当前版本
+
+给git post缓存加到500mb
+git config http.postBuffer 524288000
+
+将git添加到Github中
+git remote add origin https://github.com/xxxxx.git
+
+删除远程origin仓库
+git remote rm origin
