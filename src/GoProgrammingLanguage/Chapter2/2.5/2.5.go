@@ -37,7 +37,7 @@ func FToC(f Fahrenheit) Celsius {
 	return Celsius((f - 32) * 5 / 9)
 }
 
-//下面的声明语句，Celsius类型的参数c出现在了函数名的前面，表示声明的是Celsius类型的一个叫名叫String的方法，
+// 下面的声明语句，Celsius类型的参数c出现在了函数名的前面，表示声明的是Celsius类型的一个叫名叫String的方法，
 // 该方法返回该类型对象c带着°C温度单位的字符串
 func (c Celsius) String() string {
 	return fmt.Sprintf("%g°C", c)
